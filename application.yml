@@ -1,0 +1,54 @@
+# ===================================================================
+# JHipster Spring Cloud Config.
+# ===================================================================
+
+configserver:
+    name: JHipster Registry config server
+    status: Connected to the JHipster Registry config server, using gitlab !
+
+jhipster:
+    security:
+        authentication:
+            jwt:
+                secret: bXktc2VjcmV0LXRva2VuLXRvLWNoYW5nZS1pbi1wcm9kdWN0aW9uLWFuZC10by1rZWVwLWluLWEtc2VjdXJlLXBsYWNl
+eureka:
+    client:
+        service-url:
+            defaultZone: http://admin:admin@localhost:8761/eureka/
+enviaportafirmas:
+    datasource:
+        url: jdbc:oracle:thin:@10.166.198.4:1521:SCAI
+        username: GESFIR
+        password: simeta
+
+certificado:
+    alias: le-22590ca3-218e-4d7e-8d7e-7c946be7534b
+    path: ${sistemafirma.gesfir.repositorio.raiz}/certificado.pfx
+    secret: ronaldo7
+
+sistemafirma:
+    gesfir:
+        repositorio: 
+            raiz: E:/Temp/SistemaFirma
+            evidencias: ${sistemafirma.gesfir.repositorio.raiz}/evidencias
+            documentos: ${sistemafirma.gesfir.repositorio.raiz}/documentos
+            anexos: ${sistemafirma.gesfir.repositorio.raiz}/anexos
+            firmas: ${sistemafirma.gesfir.repositorio.raiz}/firmas
+            repository: ${sistemafirma.gesfir.repositorio.raiz}/archivosSubidos
+
+    enviaportafirmas:
+        gesfir:
+            gestionDocSi: /pasarela-firma.xhtml
+            gestionDocNo: /pasarela-firma-no-visualiza.xhtml
+            url: http://127.0.0.1:8080/gesfir
+        figesperws:
+            endpoint: http://www-pre.sms.carm.es/figesperwsacceso/FigesperAccesoWS?wsdl
+            user: jcg25l
+            password: jcgwspr325
+            timeOut: 30
+        csv:
+            key: ${sistemafirma.gesfir.repositorio.raiz}/key.txt
+            
+ip:
+    zipkin: 192.168.1.97
+    logstash: 192.168.1.97
