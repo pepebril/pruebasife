@@ -22,14 +22,14 @@ enviaportafirmas:
         password: simeta
 
 certificado:
-    alias: le-22590ca3-218e-4d7e-8d7e-7c946be7534b
-    path: ${sistemafirma.gesfir.repositorio.raiz}/certificado.pfx
-    secret: ronaldo7
+    alias: (lp_qsep_m_es_p12_344_1825_sw_kpsc)_q8050008e_52758360v
+    path: /var/opt/sife/certificados/SELLO_PREPRODUCCION_SGTI_2017.pfx
+    secret: Cr1st0b4l7
 
 sistemafirma:
     gesfir:
-        repositorio: 
-            raiz: E:/Temp/SistemaFirma
+        repositorio:
+            raiz: /opt/sife/SistemaFirma
             evidencias: ${sistemafirma.gesfir.repositorio.raiz}/evidencias
             documentos: ${sistemafirma.gesfir.repositorio.raiz}/documentos
             anexos: ${sistemafirma.gesfir.repositorio.raiz}/anexos
@@ -47,8 +47,8 @@ sistemafirma:
             password: jcgwspr325
             timeOut: 30
         csv:
-            key: ${sistemafirma.gesfir.repositorio.raiz}/key.txt
-            
+            key: /opt/sife/certificados/key.txt
+
 ip:
-    zipkin: 192.168.1.97
-    logstash: 192.168.1.97
+    zipkin: 10.166.198.210
+    logstash: 10.166.198.210
