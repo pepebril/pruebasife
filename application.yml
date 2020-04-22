@@ -14,7 +14,7 @@ jhipster:
 eureka:
     client:
         service-url:
-            defaultZone: http://admin:admin@localhost:8761/eureka/
+            defaultZone: http://admin:admin@10.166.198.210:8761/eureka/
 enviaportafirmas:
     datasource:
         url: jdbc:oracle:thin:@10.166.198.4:1521:SCAI
