@@ -47,7 +47,7 @@ sistemafirma:
             password: jcgwspr325
             timeOut: 30
         csv:
-            key: /opt/sife/certificados/key.txt
+            key: ${sistemafirma.gesfir.repositorio.raiz}/certificados/key.txt
 
 ip:
     zipkin: 10.166.198.210
